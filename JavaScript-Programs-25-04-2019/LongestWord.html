@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Longest Word in string</title>
+</head>
+<body>
+  <script type="text/javascript">
+  	
+function longest(str)
+{
+  var array = str.match(/[A-z}[a-z]{0,}/gi);
+  var result = array[0];
+
+  for(var i = 1 ; i < array.length ; i++)
+  {
+    if(result.length < array[i].length)
+    {
+    result = array[i];
+    } 
+  }
+  return result;
+}
+console.log(longest('ibm technology consulting'));
+  </script>
+</body>
+</html>

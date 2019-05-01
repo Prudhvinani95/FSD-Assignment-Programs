@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>Check for string</title>
+		<script src="js/checkStr.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<p id="editPanel">Enter any keyboard values or strings</p>
+		<input type="text" id="checkForString">
+		<button type="button" onclick="checkStr('checkForString', 'editPanel');">Check</button>
+		<script type="text/javascript">
+			function checkStr(checkForString, editPanel)	{
+	checkForString = document.getElementById(checkForString).value;
+	pattern = /[a-z,A-Z]+/g;
+
+	if(!checkForString.match(pattern))	{
+		elementEdit(editPanel, "not a string!");
+	}
+	else {
+		elementEdit(editPanel, "You Entered a string");
+	}
+}
+
+function elementEdit(element, text)	{
+	document.getElementById(element).innerHTML = text;
+}
+		</script>
+	</body>
+</html>
