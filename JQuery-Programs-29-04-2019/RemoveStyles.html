@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove all css associated with a particular "div" on mouse click</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="myclass" style="background-color: skyblue; font-size: 30px; font-style: bold;">
+		This is my jquery first page
+	</div>
+	<button id="myid">Click to Disable CSS</button>
+	<script type="text/javascript">
+		$(document).ready(function() {
+				$("#myid").click(function(event) {
+					$(".myclass").removeAttr('style');
+				});
+		});
+	</script>
+</body>
+</html>
