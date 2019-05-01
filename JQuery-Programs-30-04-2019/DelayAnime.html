@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delay the execution of subsequent items in the animation queue</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<button class="mybutton">Click</button>
+	<div class="myclass" style="width:100px;height:100px;background-color: blue; ">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".mybutton").click(function(){
+				$(".myclass").animate({height: '400px'}, 'slow');
+				$(".myclass").delay('3000').fadeIn();
+				$(".myclass").animate({opacity: '0.2'}, 'slow');
+		        $(".myclass").delay('3000').fadeIn();
+                $(".myclass").animate({width: '400px'}, 'slow');
+			    
+			});
+		});
+	</script>
+
+</body>
+</html>

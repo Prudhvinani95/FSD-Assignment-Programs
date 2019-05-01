@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete the last row in a table</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<table border="1px solid black;">
+	<tr>
+		<td>UserName</td>
+		<td>Password</td>
+	</tr>
+	<tr>
+		<td>sam</td>
+		<td>john</td>
+	</tr>
+	<tr>
+		<td>sam@1234</td>
+		<td>john@345</td>
+	</tr>
+</table>
+<button>Click to remove row</button>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("table tr:last").remove();
+		});
+	});
+</script>
+</body>
+</html>
